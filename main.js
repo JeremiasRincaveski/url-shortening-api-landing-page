@@ -1,17 +1,17 @@
 const url = 'https://api.shrtco.de/v2/shorten?url='
 const input = document.querySelector('.input__link')
 const submit = document.querySelector('.input__button')
-let copy = []
+const haburger = document.querySelector('[data-button="hamburger"]')
 
 const takeCopy = () => {
-  copy = Array.from(document.querySelectorAll('.result__button'))
-  copy.forEach((item) => {
-    item.removeEventListener('click', funcao)
-    item.addEventListener('click', funcao)
+  const copyButton = Array.from(document.querySelectorAll('.result__button'))
+  copyButton.forEach((item) => {
+    item.removeEventListener('click', clicked)
+    item.addEventListener('click', clicked)
   })
 }
 
-const funcao = (e) => {
+const clicked = (e) => {
   const text = e.target.previousElementSibling.textContent
   navigator.clipboard.writeText(text)
   e.target.textContent = 'Copied!'
@@ -36,4 +36,20 @@ submit.addEventListener('click', () => {
     // input.value = ''
     takeCopy()
   })
+})
+
+haburger.addEventListener('click', () => {
+  const ul = document.querySelector('.header__nav--ul')
+  const container = document.querySelector('.header__nav')
+  const styles = window.getComputedStyle(ul)
+  if (styles.display === 'none') {
+    ul.style.display = 'flex'
+    ul.style.flexDirection = 'column'
+    container.style.flexDirection = 'column'
+  }
+  else {
+    ul.style.display = 'none'
+    container.style.flexDirection = 'row'
+    container.style.justifyContent = 'space-between'
+  }
 })
