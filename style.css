@@ -156,7 +156,7 @@ main {
 
 .input {
   background-color: var(--very-dark-violet);
-  background-image: url('../images/bg-shorten-desktop.svg');
+  background-image: url('./images/bg-shorten-desktop.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -384,7 +384,7 @@ main {
 .main__footer {
   align-items: center;
   background-color: var(--very-dark-violet);
-  background-image: url('../images/bg-shorten-desktop.svg');
+  background-image: url('./images/bg-shorten-desktop.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -477,6 +477,10 @@ footer {
   text-align: center;
 }
 
+.attribution a {
+  color: var(--cyan);
+}
+
 @media (max-width: 800px) {
   .header__nav {
     align-items: center;
@@ -534,7 +538,7 @@ footer {
   }
 
   .input {
-    background-image: url('../images/bg-boost-mobile.svg');
+    background-image: url('./images/bg-boost-mobile.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -627,7 +631,7 @@ footer {
 
   .main__footer {
     align-items: center;
-    background-image: url('../images/bg-boost-mobile.svg');
+    background-image: url('./images/bg-boost-mobile.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
