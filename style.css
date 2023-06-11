@@ -156,7 +156,7 @@ main {
 
 .input {
   background-color: var(--very-dark-violet);
-  background-image: url(../images/bg-shorten-desktop.svg);
+  background-image: url('../images/bg-shorten-desktop.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -170,7 +170,7 @@ main {
   padding: 2rem 3rem;
   position: absolute;
   top: -9rem;
-  width: 100%;
+  width: 90%;
 }
 
 .input__link {
@@ -179,6 +179,7 @@ main {
   border-radius: 8px;
   color: var(--very-dark-violet);
   flex: 2 2 570px;
+  max-width: 100%;
   padding: 1rem 1.5rem;
 }
 
@@ -308,10 +309,9 @@ main {
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
-  max-width: 355px;
+  max-width: 32ch;
   padding: 2rem 1.5rem;
   position: relative;
-  width: 100%;
   z-index: 1;
 }
 
@@ -384,9 +384,9 @@ main {
 .main__footer {
   align-items: center;
   background-color: var(--very-dark-violet);
-  background-image: url(../images/bg-boost-desktop.svg);
-  background-repeat: no-repeat;
+  background-image: url('../images/bg-shorten-desktop.svg');
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -431,16 +431,17 @@ footer {
   align-items: flex-start;
   display: flex;
   flex-direction: row;
-  gap: 10vw;
+  gap: calc(1rem + 3vw);
   margin: 0 auto;
+  max-width: 1100px;
   padding-top: 1rem;
+  width: 90%;
 }
 
 .footer__list {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  gap: .5rem;
   list-style: none;
   margin: 0;
 }
@@ -502,58 +503,83 @@ footer {
     height: auto;
     margin-top: 0;
   }
-
-  .banner__image {
-    height: 80vh;
-    left: 25vw;
-    order: -1;
-    position: relative;
-    top: 0;
-    width: 140vw;
-  }
-
+  
   .banner__title {
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 4rem 0 1rem 0;
+    max-width: 80vw;
     text-align: center;
   }
-
+  
   .banner__paragraph {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 2rem;
     text-align: center;
     width: 30ch;
   }
-
+  
   .banner__button {
     font-size: 1.3rem;
     margin-bottom: 4rem;
     padding: 1rem 2rem;
+    background-position: left bottom;
+  }
+  
+  .banner__image {
+    left: 0;
+    margin-top: 0;
+    order: -1;
+    position: relative;
+    top: 0;
   }
 
   .input {
+    background-image: url('../images/bg-boost-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     margin-left: auto;
     margin-right: auto;
     width: 90vw;
   }
 
   .results {
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
-    margin-top: 8rem;
+    margin-top: 9rem;
+  }
+
+  .result__line {
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: flex-start;
+  }
+
+  .result__link {
+    width: 100%;
   }
 
   .result__shorten-link {
-    max-width: 30%;
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .result__button {
+    width: 100%;
   }
 
   .statistics {
     align-items: center;
     flex-direction: column;
-    margin-top: 7rem;
+    margin-top: 4rem;
+  }
+
+  .statistic__advanced--title {
+    font-size: 1.6rem;
   }
 
   .statistic__advanced--paragraph {
+    font-size: 1rem;
     margin-bottom: 2rem;
     text-align: center;
     width: 30ch;
@@ -563,13 +589,14 @@ footer {
     align-items: center;
     flex-direction: column;
     gap: 2rem;
-    margin-top: 7rem;
+    margin-top: 5rem;
   }
 
   .statistics__details--card {
     align-items: center;
     text-align: center;
-    width: 32ch;
+    padding-left: auto;
+    padding-right: auto;
   }
 
   .statistics__details--card:nth-child(2), .statistics__details--card:nth-child(3) {
@@ -600,6 +627,10 @@ footer {
 
   .main__footer {
     align-items: center;
+    background-image: url('../images/bg-boost-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     display: flex;
     height: 30vh;
     justify-content: center;
@@ -622,6 +653,7 @@ footer {
   .footer__list {
     align-items: center;
     text-align: center;
+    justify-content: space-evenly;
   }
 
   .footer__logo {
